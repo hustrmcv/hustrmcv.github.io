@@ -1,0 +1,13 @@
+#head{opacity: 0;}
+#name{position: fixed;
+	top:0;
+	z-index: 7;
+	width:100%;
+	padding:5px 0;
+/*	background: #31FB93*/}
+.tips{margin-top: 114px;}
+
+/*	height:50px;
+	line-height: 50px;}
+*/
+/*#select{visibility: hidden;}*/

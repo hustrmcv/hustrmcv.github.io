@@ -1,0 +1,58 @@
+@media screen and (max-width: 800px)
+{
+		.left{width:100%;
+		position:relative;}
+		.left div:nth-child(1){
+		padding-top: 0px;
+		}
+		.body{width: 100%;
+		position: unset;}
+		.body div{
+		margin:20px 5px;
+		padding: 10px 20px;
+		}
+		.footer{display: none}
+		time{position: absolute;
+		right:20px;
+		margin-top: 10px;
+		}
+		tit{
+		padding:11px 0;
+		padding-left: 0px;}
+		.meet
+		{
+		top:-20px;
+		}
+		#select{
+		margin-top: 0px;
+		}
+		@keyframes myfirst 
+		{
+		0%{opacity: 0;
+		width:0;}
+		100%{opacity: 0.9;
+		width:94%;}
+		}
+		.tip
+		{
+		animation: myfirst 0.5s;
+		margin:0px 0;
+		margin-top:10px;
+		width:94%;
+		}
+		img[src="./images/tips.jpg"]{
+			top:0;
+		}
+		.tip a{
+		border:0;
+		padding: 0 14px;
+		background: #eee;
+		position: relative;
+		bottom:40px;
+		border-radius: 5px 5px;
+		}
+		tit{font-size: 1.5em}
+		time{font-size: 0.5em;padding-right: 30px}
+		.tips{visibility: hidden;}
+		#select{margin-top: -50px;}
+}

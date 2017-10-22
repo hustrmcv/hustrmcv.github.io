@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>蔡冰成的个人简历</title>
+	<link rel="stylesheet" href="./statics/jquery.fullPage.css">
+	<script src="./statics/jquery.min.js"></script>
+	<script src="./statics/jquery-ui-1.11.2.min.js"></script>
+	<script src="./statics/jquery.fullPage.min.js"></script>
+	
+	<link rel = "Shortcut Icon" href="./statics/header.png">
+
+	<style type="text/css">
+	body{padding: 0 0;
+		margin:0 0;
+		font-family: "Microsoft YaHei";
+		background: #eee;}
+	a{outline: none;}
+	.section{
+		}
+	.left{
+		position:fixed;
+		top:0px;
+		text-align: center;
+		background:#fff;
+		box-shadow: 1px 1px 1px #666;
+		height: 100%;
+		z-index: 7;}
+	.left button{
+		background: #fff;
+		border:0;
+		outline: none;
+		cursor: pointer;}
+	.left li{
+		padding: 10px 120px;
+		font-size: 1em;	
+		font-weight: 100;
+		list-style: none;
+		color:#333;}
+	#select{
+		margin-top: 0px;
+	}
+	.left div:nth-child(1){
+		margin:0 0;
+		padding-top: 100px;
+		background: #A5BB9A}
+	.left img{
+		width:100px;
+		height:100px;
+		border-radius: 50% 50%;
+		position: relative;
+		top:20px;
+		border:5px solid #fff;
+		}
+	.left li[id="name"]{
+		padding: 15px 0px;
+		margin-bottom: 20px;
+		font-size: 1.8em;
+		font-weight: 500;
+		color:#eee;
+		background: #D7C7DF
+	}
+	#name p{
+		font-size: 0.5em;
+		font-weight: 100;
+		color:#fff;
+		line-height: 10px;
+	}
+	.left a{
+		text-decoration: none;
+		color:#333;
+	}
+	.left a li:hover{
+		opacity: 0.7;
+	}
+	.left a li:active{
+		color: #ccc;
+	}
+	.on{background: #F7D5FD}
+	.meet
+	{
+		position: relative;
+		top:-10px;
+	}
+	.meet img{
+		width:30px;
+		height:30px;
+		opacity: 0.8;
+	}
+	.meet a img:hover{
+		opacity: 0.5
+	}
+	.footer{
+		padding: 5px 38px;
+		text-align: center;
+		font-size: 1px;
+		font-weight: 100;
+		position: fixed;
+		bottom:0;
+	}
+	#fullpage{
+		width:78%;
+		margin-left: 22%;
+		text-align: center;
+		padding: 0px 10px;
+	}
+	
+	h1 {
+	width: 150px;
+	margin: 0 auto;
+	font-size: 24px;
+	font-weight: bold;
+    }
+	#about_content {
+		height: 510px;
+	}
+	#about_list_content {
+		margin: 50px auto;
+		width: 800px;
+		height: 150px;
+		padding: 20px 0;
+		border-radius: 30px;
+		background: #a0a0b4;	
+	}
+	.about_list {
+		float: left;
+		margin-left: 120px;
+		cursor: pointer;
+	}
+	#about_list1 {
+		margin-left: 60px;
+	}
+	.about_list:hover .about_list_eg {
+		background: rgba(255,255,255,1);
+		color: #702fa8;
+		box-shadow: 0 0 0 8px rgba(255,255,255,0.3);
+	}
+	.about_list:hover .about_list_eg:before{
+		-webkit-animation: l_to_r 1s forwards;
+		-moz-animation: l_to_r 1s forwards;
+		-o-animation: l_to_r 1s forwards;
+		animation: l_to_r 1s forwards;
+	}
+	.about_list_eg {
+		width: 80px;
+		height: 80px;
+		box-shadow: 0 0 0 4px rgba(255,255,255,1);
+		border-radius: 50%;
+		overflow: hidden;
+		color: #fff;
+		-webkit-transition: background 1s, color 1s, box-shadow 1s;
+		transition: background 1s, color 1s, box-shadow 1s;
+	}
+	.about_list_eg:before {
+		display: block;
+		line-height: 130px;
+		text-align: center;
+	}
+	#about_en_edu:before {
+		content: url(./statics/education.png);
+	}
+	#about_en_age:before {
+		content: url(./statics/age.png);
+	}
+	#about_en_loc:before {
+		content: url(./statics/location.png);
+	}
+	#about_en_sta:before {
+		content: url(./statics/status.png);
+	}
+	.about_list_cn {
+		padding-top: 20px;
+		line-height: 20px;
+		position: relative;
+		color: #fff;
+	}
+	.about_list_cn p {
+		padding-top: 10px;
+		text-align: right;
+		font-size: 14px;
+	}
+	.about_list_cn p:before {
+		display: block;
+		content: "";
+		position: absolute;
+		background: #ccc;
+		height: 2px;
+		width: 90px;
+		bottom: 25px;
+		-webkit-transform: rotate(-30deg);
+		transform: rotate(-30deg);
+	}
+	@-webkit-keyframes l_to_r {
+		49% {
+			-webkit-transform: translate(100%);
+			transform: translate(100%);
+		}
+		50% {
+			-webkit-transform: translate(-100%);
+			transform: translate(-100%);
+			opacity: 0;
+		}
+	}
+	@-moz-keyframes l_to_r {
+		49% {
+			transform: translate(100%);
+		}
+		50% {
+			transform: translate(-100%);
+			opacity: 0;
+		}
+	}
+	@-o-keyframes l_to_r {
+		49% {
+			transform: translate(100%);
+		}
+		50% {
+			transform: translate(-100%);
+			opacity: 0;
+		}
+	}
+	@keyframes l_to_r {
+		49% {
+			transform: translate(100%);
+		}
+		50% {
+			transform: translate(-100%);
+			opacity: 0;
+		}
+	}
+	@media screen and (max-width:1366px){
+	#about_list_content{
+		margin: 40px auto;
+		width: 700px;
+	}
+	#about_list1 {
+		margin-left: 76px;
+	}
+	.about_list {
+		margin-left: 76px;
+	}
+	#about_list_content {
+		padding: 15px 0;
+	}
+	}	
+	hr{
+		width:150px;
+	}
+	h1{
+		color:#bebebe;
+	}
+	h3{
+		padding: 0 0;
+		position: relative;
+		bottom: 10px;
+		color: #ffb3be;
+	}
+	#about_info{
+		color:#ffb3be;
+	}
+	#about_info hr{
+		width:300px;
+	}
+	.skill h1{
+		color:#ffb3be;
+	}
+	.skill h3{
+		color:#fcc5c7;
+	}
+	.skill hr{
+		color:blue;
+	}
+	.experience h1{
+		color:#bebebe;
+	}
+	.experience h3{
+		color:#4bd4d4;
+	}
+	.demo h1{
+		color:#fccdbe;
+	}
+	.skill	table{
+		float:right;
+		margin-right:100px;
+	}
+	.skill tr td:nth-child(1){
+		padding: 0 8px
+	}
+	.skill tr td:nth-child(2){
+		color:#ffb3be;
+		height:30px;
+		vertical-align: middle;
+		line-height: 30px;
+	}
+	.skill tr td:nth-child(3){
+		width: 400px;
+		height:30px;
+		vertical-align: middle;
+		line-height: 30px;
+		background: #ffb3be;
+		padding: 0 0;
+		border:0;
+		border-radius: 5px 5px 5px 5px;
+		opacity: 0.8;
+	}
+	.skill tr div{
+		border-radius: 5px 5px 5px 5px;
+		height:100%;
+		border:0;
+		background: #bebebe;
+		color:#ffb3be;
+		opacity: 1;	
+	}
+	.skill tr{
+		opacity: 100;
+	}
+	.skill tr:hover{
+		opacity: 0.8;
+	}
+	#html{
+		width:90%;
+	}
+	#html:after{
+		content: "90%"
+	}
+	#css{
+		width:80%;
+	}
+	#css:after{
+		content: "80%"
+	}
+	#js{
+		width:84%;
+	}
+	#js:after{
+		content: "84%"
+	}
+	#py{
+		width:70%;
+	}
+	#py:after{
+		content: "70%"
+	}
+	#c{
+		width:88%;
+	}
+	#c:after{
+		content: "88%"
+	}
+	.skill{
+		text-align: center;
+	}
+	.skill p{
+		color:#ffb3be;
+		width:100%;
+	}
+	.skill .detail{
+		width:330px;
+		height:180px;
+		padding: 5px 5px;
+		border-radius: 5px 5px 5px 5px;
+		background:#ffb3be;
+		margin-left: 80px;
+		margin-top: 10px;
+		float: left;
+		opacity: 0.6;
+	}
+	.skill table img{
+		transform: rotateZ(90deg);
+		opacity: 0.8;
+	}
+	.skill table tr{
+		cursor: pointer;
+	}
+	.skill table tr img[class="on"]{
+		transform: rotateZ(-90deg);
+		transition: transform 0.5s;
+		background: none;
+	}
+	.skill table tr img[class="back"]{
+		transform: rotateZ(90deg);
+		transition: transform 0.5s;
+		background: none;
+	}
+	.skill .detail{
+		vertical-align: middle;
+		line-height: 30px;
+		text-align: initial;
+	}
+	.skill .skill-info{
+		width:1060px;
+	}
+	.experience .date div{
+		cursor: pointer;
+		width:15px;
+		height:15px;
+		background: #666;
+		border-radius: 50% 50% 50% 50%;
+		border:5px #aaa solid;
+		display: inline-block;
+		margin: 0 20px;
+	}
+	.experience .date div:hover{
+		background: #333;
+		border:5px #999 solid;
+	}
+	.experience .info{
+		height:300px;
+		width:700px;
+		border-radius: 10px 10px 10px 10px;
+		opacity: 0.8; 
+		background: #beb2b4;
+		display: inline-block;
+		overflow: hidden;
+	}
+	.experience p{
+		color:#beb2b4;
+	}
+	.experience .info div[class="left-angle"]{
+		background: #666;
+		width: 40px;
+		height:40px;
+		opacity: 0.6;
+		line-height: 50px;
+		border-radius: 50% 50% 50% 50%;
+		position: relative;
+		top:130px;
+		left: 5px;
+		cursor: pointer;
+		z-index: 7;
+	}
+	.experience .info div[class="left-angle"] img{
+		transform: rotateZ(-90deg);
+	}
+	.experience .info div[class="right-angle"]{
+		background: #666;
+		width: 40px;
+		height:40px;
+		opacity: 0.6;
+		line-height: 50px;
+		border-radius: 50% 50% 50% 50%;
+		position: relative;
+		top:90px;
+		left: 655px;
+		cursor: pointer;
+		z-index: 7;
+	}
+	.experience .info div[class="right-angle"] img{
+		transform: rotateZ(90deg);
+	}
+	.experience .info div[class="left-angle"]:hover , .experience .info div[class="right-angle"]:hover{
+		opacity: 0.8
+	}
+	.experience .info span:nth-child(1){
+		display: inline-block;
+		float: left;
+		margin :10px 0;
+		margin-left: 70px;
+		position: relative;
+		bottom:70px;
+		text-align: initial;
+	}
+	.experience .info span:nth-child(2){
+		display: inline-block;
+		float: right;
+		margin :10px 0;
+		margin-right: 70px;
+		position: relative;
+		bottom:70px;
+		text-align: initial;
+	}
+	.experience .info span p{
+		color: #000;
+	}
+	.experience .info span img{
+		width:260px;
+		height:260px;
+	}
+	.experience .info div[class="all-info"]{
+		width:100000px;
+		padding: 0 0;
+		height:300px;
+		text-align: initial;
+		margin: 0 0;
+		padding: 0 0;
+		float:left;
+	}
+	.experience .info .date-info{
+		width:700px;
+		height:300px;
+		padding: 0 0;
+		margin: 0 0;
+		display: inline-block;
+	}
+	.experience .info .all-info{
+		transition: all 1s;
+	}
+	.demo{
+		text-align: center;
+	}
+	.demo .info{
+		height:320px;
+		width:780px;
+		padding: 10px 10px;
+		display: inline-block;
+		background: #bebbed;
+		opacity: 0.8;
+		border-radius: 10px  10px  10px  10px;
+	}
+	.demo .info .line{
+		height:150px;
+		overflow:hidden;
+		margin:0 0;
+		padding: 0 0;
+		border:0;
+	}
+	.demo .info .line .cell{
+		height:300px;
+		width:150px;
+		position: relative;
+		display: inline-block;
+		border: 0;
+		padding: 0 0;
+		margin:0 0;
+		cursor: pointer;
+	}
+	@keyframes movecell{
+		from{top:0;}
+		to{top:-150px;}
+	}
+	.demo .info .line .cell:hover{
+		animation: movecell 0.5s forwards;
+	}
+	.demo .info .line .cell div
+	{
+		height: 150px;
+		width:150px;
+		background: #bebebe;
+		margin:0 0;
+		padding: 0 0;
+		border:0;
+	}
+	.demo .info .line .cell:nth-child(2) div{
+		background: #cd5f4d;
+	}
+	.demo .info .line img{
+		width:100%;
+		height:100%;
+		border:0;
+		margin:0 0;
+		padding: 0 0;
+	}
+</style>
+</head>
+<body>
+	<div class="left">
+		<div class="img"><img src="./statics/header.jpg" id="head"/></div>
+		<nav>
+			<li id="name">蔡冰成<p>兴趣使我深入&nbsp;&nbsp;热爱让我精通</p></li>	
+		</nav>
+		<br>
+		<div id="select">
+			<a href="#personal"><li>关于我</li></a>
+			<a href="#skill"><li>专业技能</li></a>
+			<a href="#history"><li>我的经历</li></a>
+			<a href="#works"><li>我的作品</li></a>
+			<a href="../index.html" target="_blank"><li>个人博客</li></a>
+		</div>
+		<div class="meet">
+			<a href="https://github.com/caibingcheng" target="_blank"><img title="GitHub" src="./statics/github.jpg"></a>
+			<a href="mailto:jack_cai@163.com"><img title="网易邮箱" src="./statics/mail.png"></a>
+			<a href="http://user.qzone.qq.com/1193376579" target="_blank"><img title="QQ空间" src="./statics/qqzone.jpg"></a>
+		</div>
+		<div class="footer">
+		<abbr title="">Designed</abbr> by <i>Cai Bingcheng</i> in HUST, 2016
+		</div>
+	</div>
+
+	<div id="fullpage">
+		<div class="section about">
+			<div id="about">
+				<div id="about_content">
+					<div class="title">
+						<br><br><br>
+						<h1>关于我</h1>
+						<hr>
+						<h3>ABOUT ME</h3>
+					</div>
+					<div id="about_list_content">
+						<div class="about_list" id="about_list1">
+							<div class="about_list_eg" id="about_en_edu">education</div>
+							<div class="about_list_cn" id="about_cn_edu">学历<p>本科</p></div>
+						</div>
+	                    <div class="about_list">
+	                        <div class="about_list_eg" id="about_en_age">age</div>
+	                        <div class="about_list_cn" id="about_cn_age">年龄<p>19岁</p></div>
+	                    </div>
+	                    <div class="about_list">
+	                        <div class="about_list_eg" id="about_en_loc">location</div>
+	                        <div class="about_list_cn" id="about_cn_loc">坐标<p>武汉</p></div>
+	                    </div>
+	                    <div class="about_list">
+	                        <div class="about_list_eg" id="about_en_sta">status</div>
+	                        <div class="about_list_cn" id="about_cn_sta">状态<p>在读</p></div>
+	                    </div>
+					</div>
+					<br>
+					<div id="about_info">
+						<hr>
+						<p>就读于华中科技大学自动化学院自动化专业</p>
+						<p>喜欢缓慢抒情的纯音</p>
+						<p>喜欢优雅、富有层次感的代码，且略微强迫症</p>
+						<p>热衷于用原生方式实现功能的码农</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	    <div class="section skill">
+		    <div class="skill-info">
+		    	<div class="title">
+					<br><br><br>
+					<h1>专业技能</h1>
+					<hr>
+					<h3>SKILLS</h3>
+		    	</div>
+		    	<p>专注原生，专注赋予代码思想及美感</p>
+		    	<p>我的熟练度仅取决于我对它热爱得有多深</p>
+		    	<br>
+		    	<div class="info">
+		    		<br>
+		    		<div class="detail"></div>
+		    		<div class="item">
+		    			<table>
+		    				<tr>	
+		    					<td id="html-img"><img src="./statics/angle.png"></td>
+		    					<td for="html-img">HTML</td>
+		    					<td><div id="html"></div></td>
+		    				</tr>
+		    				<br>
+		    				<tr>
+		    					<td><img src="./statics/angle.png"></td>
+		    					<td>CSS</td>
+		    					<td><div id="css"></div></td>
+		    				</tr>
+		    				<tr>
+		    					<td><img src="./statics/angle.png"></td>
+		    					<td>JAVASCRIPT</td>
+		    					<td><div id="js"></div></td>
+		    				</tr>
+		    				<tr>
+		    					<td><img src="./statics/angle.png"></td>
+		    					<td>PYTHON</td>
+		    					<td><div id="py"></div></td>
+		    				</tr>
+		    				<tr>
+		    					<td><img src="./statics/angle.png"></td>
+		    					<td>C/C++</td>
+		    					<td><div id="c"></div></td>
+		    				</tr>
+		    			</table>
+		    		</div>
+		    	</div>
+		    	<br><br><br><br><br><br><br><br><br><br><br>
+		    	<div>
+		    		<p>学习之路将永不停息</p>
+		    	</div>
+		    </div>
+	    </div>
+
+	    <div class="section experience">
+			<div class="title">
+				<br><br><br>
+				<h1>我的经历</h1>
+				<hr>
+				<h3>EXPERIENCE</h3>				
+			</div>
+			<div>
+				<p>回首我的经历能够让我发现自己更多的不足</p>
+				<br>
+				<div class="info">
+					<div class="left-angle"><img src="./statics/angle.png" alt=""></div>
+					<div class="right-angle"><img src="./statics/angle.png" alt=""></div>
+					<div class="all-info">
+						<div class="date-1 date-info">
+						<span>
+							<h2>思存工作室</h2>
+							<p>加入了学生社团联合会的思存工作室</p>
+							<p>正式开始了我的前端修行之路</p>
+							<p>在这里我遇到了很多很好的同事/朋友</p>
+							<p>它给了我很多展示自己的平台</p>
+							<p>我的很多项目经验来源于此</p>
+						</span>
+						<span><img src="./statics/front-end.jpg" alt=""></span>
+						</div>
+						<div class="date-2 date-info">
+							<span>
+								<h2>校内智能车大赛</h2>
+								<p>第一次与队友合作的一个项目</p>
+								<p>前期基本上由我一个人完成</p>
+								<p>电路板基本由我焊接</p>
+								<p>学会了如何与队友共同解决问题</p>
+								<p>也获得了一位长期合作的队友</p>
+							</span>
+							<span><img src="./statics/car.png" alt=""></span>
+						</div>
+						<div class="date-3 date-info">
+							<span>
+								<h2>GNG团队</h2>
+								<p>自认为在这里学到的东西不多</p>
+								<p>团队中的交流不多</p>
+								<p>但是能够留在团队也是对自身能力的验证</p>
+								<p>某段时间内对此类团队再无兴趣</p>
+								<p>后期因为与思存的部分项目冲突选择退出</p>
+							</span>
+							<span><img src="./statics/mass.png" alt=""></span>
+						</div>
+						<div class="date-4 date-info">
+							<span>
+								<h2>AR/VR项目</h2>
+								<p>这是班主任老师执行的一个项目</p>
+								<p>我请求加入其中</p>
+								<p>目前还在学习相关的知识</p>
+								<p>相信我将能够在其中展现自我</p>
+								<p>它引导我学习了一些机器视觉内容</p>
+							</span>
+							<span><img src="./statics/vr.jpg" alt=""></span>
+						</div>
+						<div class="date-5 date-info">
+							<span>
+								<h2>RoboMaster团队</h2>
+								<p>目前还是新加入的队员</p>
+								<p>在此我将深入学习机器视觉相关内容</p>
+								<p>为2017年大赛努力</p>
+								<p>但志向并不是为了加入大疆</p>
+								<p>只是希望能够学到自己喜欢的东西</p>
+							</span>
+							<span><img src="./statics/cv.jpg" alt=""></span>
+						</div>
+						<div class="date-6 date-info">
+							<span>
+								<h2>C语言课程设计</h2>
+								<p>因为编译环境的问题</p>
+								<p>成为我耗时最久的一个项目</p>
+								<p>我负责了分形地形算法部分</p>
+								<p>制作了很多漂亮的分形图</p>
+								<p>目前正在优化部分图形处理算法</p>
+							</span>
+							<span><img src="./statics/ds.jpg" alt=""></span>
+						</div>
+					</div>
+				</div>
+				<br><br>
+				<div class="date">
+					<div title="2015年9月"></div>
+					<div title="2015年12月"></div>
+					<div title="2015年12月"></div>
+					<div title="2016年9月"></div>
+					<div title="2016年9月"></div>
+					<div title="2016年9月"></div>
+				</div>
+				<p id="date-show"></p>
+			</div>
+	    </div>
+
+	    <div class="section demo">
+			<div class="title">
+				<br><br><br>
+				<h1>我的作品</h1>
+				<hr>
+				<h3>DEMO</h3>
+				<br><br>
+				<div class="info">
+<!-- 					<div class="line">
+						<div class="cell">
+							<div><img src="./statics/header.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/header.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/header.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/header.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+					</div> -->
+					<div class="line">
+						<div class="cell">
+							<div><img src="./statics/zixi.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/header.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/2048.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/header.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/jyl.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+					</div>
+					<div class="line">
+						<div class="cell">
+							<div><img src="./statics/header.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/header.png" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/AUlogo蓝.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/weixin.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+						<div class="cell">
+							<div><img src="./statics/header.jpg" alt=""></div>
+							<div>hello</div>
+						</div>
+					</div>
+				</div>
+			</div>	    	
+	    </div>
+	</div>
+
+
+</body>
+
+<script type="text/javascript">
+	$(function(){
+    $('#fullpage').fullpage({
+        'verticalCentered': false,
+        'css3': true,
+        anchors: ['personal', 'skill', 'history', 'works'],
+        'navigation': true,
+        'navigationPosition': 'right',
+        'navigationTooltips': ['关于我', '专业技能', '我的经历', '我的作品'],
+        controlArrowColor:"#bebebe",
+        slidesNavPosition:"bottom",
+         'sectionsColor': ['#456789', '#888', '#fccdbe', '#45cdb6'],
+    })
+	})
+
+
+	var text=new Array;
+	text["html"]="<ul><li>理解Web标准</li><li>了解DOM机制</li><li>熟练运用html标签</li><li>熟悉xml标记语言</li><li>掌握部分html5新特性</li></ul>";
+	text["css"]="<ul><li>能够运用CSS及CSS3新属性</li><li>注重设备兼容及浏览器兼容</li><li>能够运用bootstrap框架</li><li>希望开发编程风格的CSS</li><li>注重CSS的渲染性能</li></ul>";
+	text["js"]="<ul><li>熟练掌握原生JS</li><li>注重JS代码的性能优化</li><li>注重JS代码的形式美化</li><li>能够运用jQuery</li><li>了解XSS及CSRF等漏洞</li></ul>";
+	text["py"]="<ul><li>了解Python的运行机制</li><br><li>了解flask后台开发模块</li><br><li>能够制作简单的WEB爬虫</li></ul>";
+	text["c"]="<ul><li>掌握面向对象的思想</li><li>了解OpenCV机器视觉库</li><li>注重用户体验及容错</li><li>注重C语言代码的性能优化</li><li>能够基于OpenCV开发简单人脸检测系统</li></ul>";
+	
+	document.getElementsByClassName("skill")[0].getElementsByClassName("detail")[0].innerHTML=text["html"];
+	document.getElementsByClassName("skill")[0].getElementsByTagName("img")[0].setAttribute("class","on");
+	
+
+	function ShowSkill(){
+		var skill_text = document.getElementsByClassName("skill")[0].getElementsByClassName("detail")[0];
+		var tr = document.getElementsByClassName("skill")[0].getElementsByTagName("tr");
+		skill_text.innerHTML=text[this.getElementsByTagName("div")[0].id];
+		for(var loop=0;loop<5;loop++)
+			tr[loop].getElementsByTagName("img")[0].setAttribute("class","back");
+		this.getElementsByTagName("img")[0].setAttribute("class","on");
+	}
+	
+	var loop_experience=0;
+	var len=document.getElementsByClassName("experience")[0].getElementsByClassName("date-info").length;
+	function LoopExperienceLeft()
+	{
+		if((--loop_experience) < 0)
+			loop_experience=len-1;
+		var date_info=this.parentNode.getElementsByClassName("all-info")[0];
+		date_info.style.marginLeft = -(loop_experience)*704+"px";
+		document.getElementById("date-show").innerHTML=document.getElementsByClassName("experience")[0].getElementsByClassName("date")[0].getElementsByTagName("div")[loop_experience].getAttribute("title");
+	}
+	function LoopExperienceRight()
+	{	
+		if((++loop_experience) > len-1)
+			loop_experience=0;
+		var date_info=this.parentNode.getElementsByClassName("all-info")[0];
+		date_info.style.marginLeft = -(loop_experience)*704+"px";
+		document.getElementById("date-show").innerHTML=document.getElementsByClassName("experience")[0].getElementsByClassName("date")[0].getElementsByTagName("div")[loop_experience].getAttribute("title");
+	}
+	function LoopExperience()
+	{	
+		loop_experience = parseInt(this.getAttribute("name"));
+		var date_info=document.getElementsByClassName("experience")[0].getElementsByClassName("all-info")[0];
+		date_info.style.marginLeft = -(loop_experience)*704+"px";
+		document.getElementById("date-show").innerHTML=document.getElementsByClassName("experience")[0].getElementsByClassName("date")[0].getElementsByTagName("div")[loop_experience].getAttribute("title");
+	}
+
+
+	var td=document.getElementsByClassName("skill")[0].getElementsByClassName("item")[0].getElementsByTagName("tr");
+	
+	var date_div=document.getElementsByClassName("experience")[0].getElementsByClassName("date")[0].getElementsByTagName("div");
+
+	for(var loop=0;loop<5;loop++)
+	{
+		td[loop].addEventListener("click",ShowSkill);
+	}
+	
+	document.getElementById("date-show").innerHTML=document.getElementsByClassName("experience")[0].getElementsByClassName("date")[0].getElementsByTagName("div")[0].getAttribute("title");
+
+	document.getElementsByClassName("experience")[0].getElementsByClassName("info")[0].getElementsByTagName("div")[0].addEventListener("click",LoopExperienceLeft);
+	document.getElementsByClassName("experience")[0].getElementsByClassName("info")[0].getElementsByTagName("div")[1].addEventListener("click",LoopExperienceRight);
+
+	for(var loop=0;loop<date_div.length;loop++)
+	{
+		date_div[loop].addEventListener("click",LoopExperience);
+		date_div[loop].setAttribute("name",loop);
+	}
+</script>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	</head>
+	<style>
+		html{
+			padding: 0 0;
+			margin: 0 0;
+		}
+		body{
+			background: #222;
+			padding: 0 0;
+			margin: 0 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		.lines,#begin,#info,#setting{
+			width:100%;
+			vertical-align: middle;
+			text-align: center;
+		}
+		.lines img{
+			display: inline;
+			width:12%;
+			/*border:1px solid #aaa;*/
+			margin: 0 0;
+			padding: 0 0;
+			border: 0;
+			background: #222;
+		}
+		#begin button , #setting button{
+			margin:0 20px;
+			margin-top: 10px;
+			background: #aaa;
+			color:#222;
+			padding: 10px 20px;
+			border-radius: 5px 5px 5px 5px;
+			outline: none;
+		}
+		#begin span{
+			color:#aaa;
+		}
+		#info{
+			width:100%;
+			line-height: 30px;
+			background: #aaa;
+			position: absolute;
+			bottom:0;
+		}
+		#info span{
+			width: 50%;
+			margin: 0 30px;
+			padding: 0 30px;
+			text-align: center;
+		}
+		#setting{
+			background: #aaa;
+			width:100%;
+			padding: 5px 5px;
+			position: absolute;
+			top:0;
+			display: none;
+		}
+		#setting select{
+			padding: 5px 5px;
+			margin-top: 10px;
+		}
+		#setting button{
+			border: 0;
+			background: #eee;
+			margin: 20px 0;
+		}
+		#help{
+			width:100%;
+			background: #aaa;
+			padding: 5px 5px;
+			position: absolute;
+			top:0;
+			text-align: center;
+			display: none;
+		}
+		#help li{
+			margin:10px 5px;
+			text-align: initial;
+		}
+		#temp{
+			display: none;
+		}
+		#transition{
+			width:100%;
+			position: absolute;
+			top:0;
+			text-align: center;
+			padding: 50px 0px;
+			color:#fff;
+			opacity: 0.8;
+			display: none;
+		}
+		video{
+			display: none;
+		}
+		input[type="checkbox"]{
+			height:10px;
+			width:20px;
+		}
+	</style>
+	<body>
+		<div id="transition">
+			<h2>游 戏 结 束</h3>
+			<h3>得分：</h2>
+			<h3>用时：</h2>
+		</div>
+		<div id="game">
+			<div class="lines">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+
+			<div class="lines">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+
+			<div class="lines">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+
+			<div class="lines">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+
+			<div class="lines">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+
+			<div class="lines">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+
+			<div class="lines">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+
+			<div class="lines">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+
+			<div class="lines">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+				<img src="" alt="">
+			</div>
+		</div>
+		<div id="begin">
+			<span>得分：000</span>
+			<button>开始</button>
+			<span>时间：000</span>
+		</div>
+		<div id="info">
+			<span>设置</span>
+			<span>帮助</span>
+		</div>
+		<div id="setting">
+			背景色：
+			<select name="" id="setting_color">
+				<option value="5">恢复</option>
+				<option value="1">白色</option>
+				<option value="2">黑色</option>
+				<option value="3">灰色</option>
+				<option value="4">蓝色</option>	
+			</select>
+			<br>
+			<br>
+<!-- 			背景音乐：<input type="checkbox" id="check_music">
+			<br> -->
+			<button id="setting_form">确定</button>
+		</div>
+		<div id="help">
+			<h3>记忆力训练</h3>
+			<ul>
+				<li>点击开始系统在随机位置生成一张图</li>
+				<li>点击该图并记忆位置，游戏界面黑屏</li>
+				<li>约0.5s后屏幕重新点亮并有一张新图在随机位置生成</li>
+				<li>点击该图并记忆位置，游戏界面黑屏</li>
+				<li>重复上述过程</li>
+				<br>
+				<li>任何问题请邮件我：
+					<a href="mailto:jack_cbc@163.com">jack_cbc@163.com</a>
+				</li>
+			</ul>
+			<div id="temp">
+				<img src="icon/14.png" alt="">
+				<img src="icon/15.png" alt="">
+				<img src="icon/16.png" alt="">
+				<img src="icon/17.png" alt="">
+				<img src="icon/18.png" alt="">
+				<img src="icon/19.png" alt="">
+				<img src="icon/20.png" alt="">
+				<img src="icon/21.png" alt="">
+				<img src="icon/22.png" alt="">
+				<img src="icon/23.png" alt="">
+				<img src="icon/24.png" alt="">
+				<img src="icon/25.png" alt="">
+				<img src="icon/26.png" alt="">
+				<img src="icon/27.png" alt="">
+				<img src="icon/28.png" alt="">
+				<img src="icon/29.png" alt="">
+				<img src="icon/30.png" alt="">
+				<img src="icon/31.png" alt="">
+				<img src="icon/32.png" alt="">
+			</div>
+		</div>
+<!-- 		<video controls loop name="bgmusic">
+			<source src="http://wvvw.peiyin.me/yinyue-16-2015-08-08-e11313acc1e9a455a6a0a7b1af1ee0a5.mp3" type="audio/mp3">
+		</video> -->
+	</body>
+	<script type="text/javascript">
+	// 没有注释！！！
+		var time_sec = 0;
+		var get_score = 0;
+		var imgs = document.getElementsByTagName('img');
+		var imgs_sort = new Array();
+		var temp_index = 0;
+		var temp_img;
+		var time_flow;
+		var flag_help = 0;
+		var flag_setting = 0;
+		
+		for(var loop = 0 ; loop < 63 ; loop++)
+			imgs_sort[loop] = loop;
+		function ShowTime()
+		{
+			var string;
+			if(time_sec < 10)
+				string = "时间：00" + time_sec;
+			else if(time_sec < 100)
+				string = "时间：0" + time_sec;
+			else string = "时间：" + time_sec;
+			document.getElementById("begin").getElementsByTagName("span")[1].innerHTML = string;
+			time_sec++;
+		}
+
+		function InitVector(imgs_sort)
+		{
+			imgs_sort.sort(function(a,b){ return Math.random() > 0.5 ? -1 : 1;});
+		}
+
+		function AddClick()
+		{
+			for(var loop = 0 ; loop < 63 ; loop++)
+				imgs[loop].onclick = ClickSite;
+		}
+
+		function GetScore()
+		{
+			var string;
+			get_score++;
+			if(get_score < 10)
+				string = "得分：00" + get_score;
+			else if(get_score < 100)
+				string = "得分：0" + get_score;
+			else string = "得分：" + get_score;
+			document.getElementById("begin").getElementsByTagName("span")[0].innerHTML = string;
+		}
+
+		function ClickSite()
+		{
+			var this_part = this.src.split(".");
+			if(this_part[this_part.length - 1] != "html")
+			{
+				if(this.index == (imgs_sort[temp_index-1] + 1))
+				{
+					var time = new Date();
+					var time_1 = time.getTime();
+					var time_2 = new Date();
+					GetScore();
+					//alert(time_1);
+					if(parseInt(get_score) == 63)
+					{
+						var score = "得分：" + get_score;
+					    var time = "用时：" + (parseInt(time_sec)-1) + "s";
+					 	var transition =  document.getElementById("transition");
+					 	transition.getElementsByTagName("h2")[0].innerHTML = "大师，你赢了！"
+					    transition.getElementsByTagName("h3")[0].innerHTML = score;
+					    transition.getElementsByTagName("h3")[1].innerHTML = time;
+						transition.style.display = "block";
+						document.getElementById("begin").getElementsByTagName("button")[0].innerHTML = "继续";
+						document.getElementById("begin").getElementsByTagName("button")[0].style.visibility = "visible";
+						clearInterval(time_flow);
+					}		
+					else
+					{
+						document.getElementById("game").style.visibility = "hidden";
+						var imgs_index = parseInt(Math.random() * (14 + 1) + 14 , 10);
+						temp_img = imgs_index;
+						imgs[imgs_sort[temp_index]].src = "icon/" + imgs_index + ".png";
+						window.setTimeout("document.getElementById(\"game\").style.visibility = \"visible\"",500);
+						temp_index++;
+					}				
+				}
+				else 
+				{
+					imgs[imgs_sort[temp_index-1]].style.border="1px red solid";
+					var score = "得分：" + get_score;
+				    var time = "用时：" + (parseInt(time_sec)-1) + "s";
+				 	var transition =  document.getElementById("transition");
+				 	transition.getElementsByTagName("h2")[0].innerHTML = "游 戏 结 束";
+				    transition.getElementsByTagName("h3")[0].innerHTML = score;
+				    transition.getElementsByTagName("h3")[1].innerHTML = time;
+					transition.style.display = "block";
+
+					document.getElementById("begin").getElementsByTagName("button")[0].innerHTML = "继续";
+					document.getElementById("begin").getElementsByTagName("button")[0].style.visibility = "visible";
+					clearInterval(time_flow);
+
+				}
+			}
+
+		}
+
+		function ShowHelp()
+		{
+			if(!flag_help)
+			{
+				document.getElementById("help").style.display = "block";
+				flag_help = 1;
+			}
+			else 
+			{
+				document.getElementById("help").style.display = "none";
+				flag_help = 0;
+			}
+		}		
+
+		function ImgBgcolor(color)
+		{
+			for(var loop = 0 ; loop < 63 ; loop++)
+				imgs[loop].style.background = color;
+		}
+
+		function GetForm()
+		{
+			var color = document.getElementById("setting_color");
+			var body = document.getElementsByTagName("body")[0];
+			switch(color.value)
+			{
+				case "1" : body.style.background = "#eee"; ImgBgcolor("#eee"); break;
+				case "2" : body.style.background = "#000"; ImgBgcolor("#000"); break;
+				case "3" : body.style.background = "#666"; ImgBgcolor("#666"); break;
+				case "4" : body.style.background = "#00f"; ImgBgcolor("#00f"); break;
+				case "5" : body.style.background = "#222"; ImgBgcolor("#222"); break;
+			}
+			// var check_music = document.getElementById("check_music");
+			// if(check_music.checked)
+			// 	{
+			// 		alert(0);
+			// 		document.getElementsByTagName("video")[0].autoplay = "autoplay";
+			// 	}
+			document.getElementById("setting").style.display = "none";
+			flag_setting = 0;
+		}
+
+		function ShowSetting()
+		{
+			if(!flag_setting)
+			{
+				document.getElementById("setting").style.display = "block";
+				flag_setting = 1;
+			}
+			else 
+			{
+				document.getElementById("setting").style.display = "none";
+				flag_setting = 0;
+			}
+		}
+
+		function BeginGame()
+		{
+			if(this.innerHTML != "继续")
+			{
+				var imgs_index = parseInt(Math.random() * (14 + 1) + 14 , 10);
+				temp_img = imgs_index;
+				imgs[imgs_sort[temp_index]].src = "icon/" + imgs_index + ".png";
+				temp_index++;
+				this.style.visibility = "hidden";
+				time_flow = window.setInterval("ShowTime()",1000);
+			}
+			else
+			{
+				imgs[imgs_sort[temp_index-1]].style.border="0";
+				get_score = 0;
+				time_sec = 0;
+				document.getElementById("begin").getElementsByTagName("span")[0].innerHTML = "得分：000";
+				document.getElementById("begin").getElementsByTagName("span")[1].innerHTML = "时间：000";
+				for(var loop = 0 ; loop < 63 ; loop++)
+						imgs[loop].src = "";
+					InitVector(imgs_sort);
+				document.getElementById("transition").style.display = "none";
+				var imgs_index = parseInt(Math.random() * (14 + 1) + 14 , 10);
+				temp_img = imgs_index;
+				imgs[imgs_sort[temp_index]].src = "icon/" + imgs_index + ".png";
+				temp_index++;
+				this.style.visibility = "hidden";
+				time_flow = window.setInterval("ShowTime()",1000);
+			}
+		}
+
+		window.onload = function()
+		{
+			for(var loop = 0 ; loop < 63 ; loop++)
+				{
+					imgs[loop].height = imgs[loop].width;
+					imgs[loop].index = loop + 1;
+				}
+			document.getElementById("transition").height = (imgs[loop - 1].height) * 9;
+			//alert(document.getElementById("transition").height);
+			InitVector(imgs_sort);
+			AddClick();
+			document.getElementById("begin").getElementsByTagName("button")[0].addEventListener("click" ,BeginGame);
+			document.getElementById("info").getElementsByTagName("span")[1].addEventListener("click" ,ShowHelp);
+			document.getElementById("info").getElementsByTagName("span")[0].addEventListener("click" ,ShowSetting);
+			document.getElementById("setting_form").addEventListener("click" ,GetForm);
+		}
+		
+	</script>
+</html>
