@@ -15,13 +15,13 @@
 		 	{
 			switch(x)
 			{
-				case 2 :url="./blog/essay/";
-						list_url="./list/list_essay.html";
+				case 2 :url="./blog/task/";
+						list_url="./list/list_task.html";
 						from_="handle";
 						this_page=1;
 						break;
-				case "#handle" :url="./blog/essay/";
-						list_url="./list/list_essay.html";
+				case "#handle" :url="./blog/task/";
+						list_url="./list/list_task.html";
 						from_="handle";
 						break;
 				case 1 :url="./blog/introPage/";
