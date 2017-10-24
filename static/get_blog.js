@@ -24,7 +24,7 @@
 						list_url="./list/list_essay.html";
 						from_="handle";
 						break;
-				case 1 :url="./blog/tech/";
+				case 1 :url="./blog/introPage/";
 						list_url="./list/list_tech.html";
 						this_page=1;
 						from_="home";
@@ -110,6 +110,7 @@
 									getArtical(list_all[n],url,n-6*(page-1));
 									if(page*6>len)
 										all=len;
+
 									//alert(all);	
 								}
 						}
@@ -139,9 +140,13 @@
 							var page=request.responseText;
 							para.innerHTML=MakeText(request.responseText);
 							para.style.display="block";
-						}
-
-			};
+							if(from_ == "home" && n == 0)
+							{
+								paraA = para.getElementsByTagName('a');
+								paraALen = paraA.length;
+								Show_this(paraA[paraALen - 2])
+							}
+				}};
 			request.send(null);
 		}else
 		{

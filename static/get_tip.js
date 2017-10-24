@@ -14,7 +14,6 @@
 		tips.innerHTML="";
 		var tips=document.getElementsByClassName("tips")[0];
 		tips.innerHTML="<button href=\"#\" id=\"show\" onclick=\"Show_tip();getContent()\"><img src=\"./images/tips.jpg\" alt=\"介绍\"></button><div id=\"son\"></div>";
-		
 	}
 
 	function getContent()
