@@ -144,7 +144,7 @@
 							{
 								paraA = para.getElementsByTagName('a');
 								paraALen = paraA.length;
-								Show_this(paraA[paraALen - 2])
+								Show_this(paraA[paraALen - 2]);
 							}
 				}};
 			request.send(null);
