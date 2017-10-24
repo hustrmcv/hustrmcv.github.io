@@ -20,7 +20,7 @@ function phone() {
             	}
             if(scroll_top>290 && flag_2==0)
             	{
-            	document.getElementById("name").innerHTML="Jerry";
+            	document.getElementById("name").innerHTML="狼牙@CV";
             	flag_2=1;
             	}
             if(scroll_top<=289 && flag_2==1)
