@@ -25,17 +25,21 @@
 						from_="handle";
 						break;
 				case 1 :url="./blog/introPage/";
-						list_url="./list/list_tech.html";
+						list_url="./list/list_introPage.html";
 						this_page=1;
 						from_="home";
 						break;
-				case "#home" :url="./blog/tech/";
-						list_url="./list/list_tech.html";
+				case "#home" :url="./blog/introPage/";
+						list_url="./list/list_introPage.html";
 						from_="home";
 						break;
-				case "#all":
-				case 3:url="./blog/";
-						list_url="./list/list_all.html";
+				case 3:url="./blog/resource/";
+						list_url="./list/list_resource.html";
+						from_="all";
+						this_page = 1;
+						break;
+				case "#all":url="./blog/resource/";
+						list_url="./list/list_resource.html";
 						from_="all";
 						break;
 			}
