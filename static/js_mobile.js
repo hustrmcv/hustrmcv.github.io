@@ -22,6 +22,9 @@ function phone() {
             	{
             	document.getElementById("name").innerHTML="狼牙@CV";
             	flag_2=1;
+
+
+                  
             	}
             if(scroll_top<=289 && flag_2==1)
             	{
