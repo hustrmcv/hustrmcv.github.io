@@ -26,6 +26,7 @@
 ### \<more\>文章相对根目录地址\</more\>
 #
 * * *
+* * *
 #### 记得将文章文件名写入相应list，Eg : introduction.html 写入./list/list_introPage.html ; 最新的文章文件名应写在第一行
 #### 对应模块（introPage/resource/task）中需要下载的资源应放在对应模块的download目录下
 #### 点击push.sh进行自动提交（windows下）
