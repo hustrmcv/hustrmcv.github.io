@@ -22,10 +22,13 @@ function phone() {
             	{
             	document.getElementById("name").innerHTML="狼牙@CV";
             	flag_2=1;
+
+
+                  
             	}
             if(scroll_top<=289 && flag_2==1)
             	{
-            	document.getElementById("name").innerHTML="狼牙@CV<p>HUST RoboMaster</p>";
+            	document.getElementById("name").innerHTML="狼牙@CV<p>HUST RoboMasters</p>";
             	flag_2=0;
             	}
        		if(scroll_top<=90 && flag_1==1)

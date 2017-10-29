@@ -2,7 +2,7 @@
 	from_="";
 	function list(x,page){
 		var i;
-		var para=document.getElementsByClassName("blog");
+		var para=document.getElementsByClassName("document");
 		for(i=0;i<6;i++)
 			{
 				para[i].innerHTML="";
@@ -15,28 +15,32 @@
 		 	{
 			switch(x)
 			{
-				case 2 :url="./blog/task/";
+				case 2 :url="./document/task/";
 						list_url="./list/list_task.html";
-						from_="handle";
+						from_="task";
 						this_page=1;
 						break;
-				case "#handle" :url="./blog/task/";
+				case "#task" :url="./document/task/";
 						list_url="./list/list_task.html";
-						from_="handle";
+						from_="task";
 						break;
-				case 1 :url="./blog/introPage/";
-						list_url="./list/list_tech.html";
+				case 1 :url="./document/introPage/";
+						list_url="./list/list_introPage.html";
 						this_page=1;
 						from_="home";
 						break;
-				case "#home" :url="./blog/tech/";
-						list_url="./list/list_tech.html";
+				case "#home" :url="./document/introPage/";
+						list_url="./list/list_introPage.html";
 						from_="home";
 						break;
-				case "#all":
-				case 3:url="./blog/";
-						list_url="./list/list_all.html";
-						from_="all";
+				case 3:url="./document/resource/";
+						list_url="./list/list_resource.html";
+						from_="resource";
+						this_page = 1;
+						break;
+				case "#resource":url="./document/resource/";
+						list_url="./list/list_resource.html";
+						from_="resource";
 						break;
 			}
 			request.open("GET",list_url,true);
@@ -129,7 +133,7 @@
 		var request=getHttpObject();
 		src=url+src;
 		//alert(src);
-		var para=document.getElementsByClassName("blog")[n];
+		var para=document.getElementsByClassName("document")[n];
 		if(request)
 		{
 			request.open("GET",src,true);

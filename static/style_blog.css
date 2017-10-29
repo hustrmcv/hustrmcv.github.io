@@ -49,14 +49,14 @@
 		padding-top: 0px;
 		margin-top: 20px;
 	}
-	.blog p{
+	.document p{
 		margin-top: 20px;
 		padding: 5px 0;
 		font-weight: 100;
 	}
 	tag{padding: 20px 0;
 		color:#8A7BE4;}
-	.blog a[class="more"]{float: right;
+	.document a[class="more"]{float: right;
 		padding: 5px 10px;
 		position: relative;
 		bottom:0px;
@@ -68,7 +68,7 @@
 		text-decoration: none;
 		background: #AB9C9C;
 		cursor: pointer;}
-	.blog a{cursor: pointer;}
+	.document a{cursor: pointer;}
 	part{background: #AB9C9C;
 		padding: 2px 10px;
 		font-size: 10px;
@@ -77,11 +77,11 @@
 	}
 	hr[id="bottom_hr"]{position: relative;
 		bottom:40px;}
-	.blog img{
+	.document img{
 		width:100%;
 		padding:10px 0;
 	}
-		.blog p , .blog h1 , .blog h2 , .blog h3 , .blog h4 , .blog h5 , .blog h6 , .blog span , .blog i , .blog li , .blog ul , .blog ol , .blog tr , .blog td 
+		.document p , .document h1 , .document h2 , .document h3 , .document h4 , .document h5 , .document h6 , .document span , .document i , .document li , .document ul , .document ol , .document tr , .document td 
 		{line-height: 30px;
 		font-weight: 100;}
 	center{font-weight: 100;}

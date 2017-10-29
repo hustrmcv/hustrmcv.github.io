@@ -17,23 +17,24 @@
 		<div class="img"><img src="./images/header.jpg" id="head"/></div>
 		<nav>
 				<input type="search" name=""><button id="search">搜索</button>
-				<li id="name">狼牙@CV<p>HUST RoboMaster</p></li>
+				<li id="name">狼牙@CV<p>HUST RoboMasters</p></li>
 				<div class="tips">
-					<button id="show" onclick="Show_tip();getContent()"><img src="./images/tips.jpg" alt="介绍"></button>
+					<!-- onclick="Show_tip();getContent()" -->
+					<abbr title="加油！！！"><button id="show"><img src="./images/tips.jpg" alt="介绍"></button></abbr>
 					<div id="son"></div>
 				</div>
 				<div id="select">
 					<a href="#home" onclick="list(1,1)"><li>主页</li></a>
-					<a href="#handle" onclick="list(2,1)"><li>任务</li></a>
-					<a href="#all" onclick="list(3,1)"><li>资源分享</li></a>
+					<a href="#task" onclick="list(2,1)"><li>任务</li></a>
+					<a href="#resource" onclick="list(3,1)"><li>资源分享</li></a>
 					<!-- <a href="#app" onclick="list(4,1)"><li>应用</li></a> -->
 					<br >
 				</div>	
 		</nav>
 		<div class="meet">
 			<a href="https://github.com/hustrmcv" target="_blank"><img src="./images/github.jpg"></a>
-			<a href="mailto:jack_cai@163.com"><img src="./images/mail.png"></a>
-			<a href="http://user.qzone.qq.com/1193376579" target="_blank"><img src="./images/qqzone.jpg"></a>
+			<a href="http://weibo.com/robomastersclub?refer_flag=1001030102_&is_hot=1" target="_blank"><img src="./images/weibo.jpg"></a>
+			<a href="https://github.com/hustrmcv" target="_blank"><img src="./images/github.jpg"></a>
 		</div>
 		<div class="footer">
 		<abbr title="修改自Jerry的博客">Modified</abbr> by <i>Cai Bingcheng</i> in HUST, 2017
@@ -41,15 +42,15 @@
 	</div>
 	<div class="body">
 		<a href="" name="home"></a>
-		<a href="" name="handle"></a>
-		<a href="" name="all"></a>
+		<a href="" name="task"></a>
+		<a href="" name="resource"></a>
 		<a href="" name="app"></a>
-		<div class="blog"></div>
-		<div class="blog"></div>
-		<div class="blog"></div>
-		<div class="blog"></div>
-		<div class="blog"></div>
-		<div class="blog"></div>
+		<div class="document"></div>
+		<div class="document"></div>
+		<div class="document"></div>
+		<div class="document"></div>
+		<div class="document"></div>
+		<div class="document"></div>
 		<div id="page">
 			<button id="prev" onclick="list(window.location.hash,5)">&lt;&lt;Prev </button><input type="number" name="" min="1"/> / <span id="all_page"></span>   <button onclick="list(window.location.hash,7)" id="go">GO&gt;&gt;</button><button id="next" onclick="list(window.location.hash,6)">Next&gt;&gt;</button>
 		</div>
