@@ -1,3 +1,4 @@
+git pull
 git add -A
 echo  "commit infomation:"
 read commitInfo 
