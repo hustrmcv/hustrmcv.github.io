@@ -1,0 +1,38 @@
+<time>2017-11-3</time>
+<tit>Git 常用命令清单</tit>
+
+
+<article>
+<p>
+<li>git status #获取状</li>
+<li>git log  #提交日志</li>
+</p>
+<p>创建版本库
+	<li>git init #初始化</li>
+	<li>git clone #从现有仓库克隆</li>
+</p>
+<p>提交代码
+	<li>git add file  #.或*代表全部添加</li>
+	<li>git commit -m "message"</li>
+	<li>git push origin master</li>
+</p>
+<p>回退 
+	<li>git checkout -- file #取消对文件的修改（从暂存区——覆盖worktree file）</li>
+	<li>git reset HEAD file #将代码从暂存区返回工作区 </li>
+	<li>git reset --hard commit_id #回退到某一提交版本</li>
+</p>
+<p>分支管理
+	<li>git checkout -b dev #创建并切换到dev分支 </li>
+	<li>git branch #查看当前分支</li>
+	<li>git checkout master #切换到master分支</li>
+	<li>git merge dev # 将dev分支合并到当前分支</li>
+</p>
+<p>
+	<a href="https://juejin.im/entry/5809dbc42f301e005c2f27d9" target="_blank">更详细的git命令清单</a>
+</p>
+</article>
+
+
+<tag><part>git</part> <part>git 常用命令</part></tag>
+<more>./document/resource/git_commands.html</more>
+
